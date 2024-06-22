@@ -1,0 +1,34 @@
+.home-container {
+	padding: 20px;
+	max-width: 800px;
+	margin: auto;
+	font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	color: #333;
+}
+
+.contact-info p,
+.studies-section ul,
+.tech-stack-section p,
+.experience-section ul,
+.skills-section ul,
+.languages-section ul {
+	margin: 10px 0;
+}
+
+section {
+	margin-bottom: 40px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	margin: 5px 0;
+}

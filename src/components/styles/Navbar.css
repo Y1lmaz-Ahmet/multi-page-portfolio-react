@@ -1,0 +1,34 @@
+nav {
+
+	height: 6vh;
+	background-color: rgba(240, 248, 255, 0.568);
+	margin: auto;
+}
+
+
+nav ul {
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	align-items: center;
+	height: 6vh;
+}
+
+nav ul li {
+	display: inline;
+
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: black;
+	padding: 0.5rem;
+	transition: .3s;
+}
+
+nav ul li a.active {
+	color: rgba(74, 160, 17, 0.781);
+	text-decoration: dotted;
+	border-bottom: 1px solid green;
+}
