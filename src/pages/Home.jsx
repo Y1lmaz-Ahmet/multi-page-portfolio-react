@@ -6,13 +6,13 @@ import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(TextPlugin);
 
 // Importeer technologie-afbeeldingen
-import gitLogo from "../images/git.png";
-import reactLogo from "../images/react.png";
-import angularLogo from "../images/angular.png";
-import dotnetLogo from "../images/dotnet.png";
-import htmlLogo from "../images/html.png";
-import cssLogo from "../images/css.png";
-import jsLogo from "../images/javascript.png";
+import gitLogo from "/images/git.png";
+import reactLogo from "/images/react.png";
+import angularLogo from "/images/angular.png";
+import dotnetLogo from "/images/dotnet.png";
+import htmlLogo from "/images/html.png";
+import cssLogo from "/images/css.png";
+import jsLogo from "/images/javascript.png";
 
 const Home = () => {
   const heroTextRef = useRef();

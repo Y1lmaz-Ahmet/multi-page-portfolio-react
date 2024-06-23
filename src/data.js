@@ -83,39 +83,39 @@ export const talenKennis = [
 
 export const projecten = [
   {
-    imageName: "../src/images/Vortexx.png",
+    imageName: "/images/Vortexx.png",
     link: "https://html-css-javascript-vortex-x.vercel.app/",
   },
   {
-    imageName: "../src/images/EnvisionVR.png",
+    imageName: "/images/EnvisionVr.png",
     link: "https://html-css-javascript-envision-vr.vercel.app/",
   },
   {
-    imageName: "../src/images/Foodyy.png",
+    imageName: "/images/Foodyy.png",
     link: "https://html-css-javascript-foodyy.vercel.app/",
   },
   {
-    imageName: "../src/images/JobSphere.png",
+    imageName: "/images/JobSphere.png",
     link: "https://html-css-javascript-job-sphere.vercel.app/",
   },
   {
-    imageName: "../src/images/Headphones.png",
+    imageName: "/images/Headphones.png",
     link: "https://html-css-javascript-headphone.vercel.app/",
   },
   {
-    imageName: "../src/images/FoodFreak.png",
+    imageName: "/images/FoodFreak.png",
     link: "https://html-css-javascript-food-freak.vercel.app/",
   },
   {
-    imageName: "../src/images/FreshFood.png",
+    imageName: "/images/FreshFood.png",
     link: "https://y1lmaz-ahmet-restaurant-website.vercel.app/",
   },
   {
-    imageName: "../src/images/coffeeshop.png",
+    imageName: "/images/coffeeshop.png",
     link: "https://portfolio-project-coffee-shop.vercel.app/",
   },
   {
-    imageName: "../src/images/apple-app.png",
+    imageName: "/images/apple-app.png",
     link: "https://apple-website-nine-tau.vercel.app/",
   },
 ];
