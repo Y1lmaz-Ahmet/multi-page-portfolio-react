@@ -1,45 +1,59 @@
+import { useEffect, useRef } from "react";
 import "../components/styles/About.css";
+import gsap from "gsap";
 
 const About = () => {
+  const aboutRef = useRef([]);
+  aboutRef.current = [];
+
+  useEffect(() => {
+    aboutRef.current.forEach((section, index) => {
+      gsap.fromTo(
+        section,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1, delay: index * 0.5 }
+      );
+    });
+  }, []);
+
+  const addToRefs = (el) => {
+    if (el && !aboutRef.current.includes(el)) {
+      aboutRef.current.push(el);
+    }
+  };
+
   return (
     <div className='about'>
-      <section className='background'>
-        <h2>Achtergrond</h2>
+      <section className='background' ref={addToRefs}>
+        <h2>Mijn Verhaal</h2>
         <p>
-          Mijn reis begon in Lokeren op 7 december 1998 en bracht me
-          uiteindelijk naar Zele, België. Mijn fascinatie voor technologie
-          ontstond toen ik als jonge jongen mijn eerste PlayStation 2 kreeg voor
-          mijn verjaardag. Het spel dat ik voor het eerst speelde was Ratchet &
-          Clank. Al snel begon ik me af te vragen hoe deze karakters konden
-          bewegen en animaties konden uitvoeren. Op dat moment was ik echter te
-          jong, slechts 7 jaar oud, en sprak nog geen Engels. Maar op 9-jarige
-          leeftijd begon ik op de computer van mijn broer te spelen, vooral het
-          spel RuneScape, waar ik Engels begon te leren. Je vraagt je misschien
-          af wat gamen te maken heeft met programmeren? Nou, veel! Het helpt bij
-          het ontwikkelen van probleemoplossende vaardigheden, wat later
-          cruciaal bleek te zijn.
+          Mijn reis begon in Lokeren op 7 december 1998 en bracht me naar Zele,
+          België. Mijn fascinatie voor technologie begon met mijn eerste
+          PlayStation 2, vooral door het spel Ratchet & Clank. De
+          nieuwsgierigheid naar hoe deze karakters bewogen en animeerden leidde
+          tot mijn interesse in programmeren.
+        </p>
+        <p>
+          Op 9-jarige leeftijd begon ik te gamen op de computer van mijn broer,
+          met name RuneScape, waar ik ook Engels leerde. Deze vroege ervaringen
+          hebben mijn probleemoplossende vaardigheden aangescherpt, een cruciaal
+          aspect in mijn latere programmeercarrière.
         </p>
         <p>
           In het secundair onderwijs volgde ik Elektrische Installatietechnieken
-          aan VTI Dendermonde, waar ik mijn eerste ervaring opdeed met
-          programmeren - zij het met PLCs. Ik ontdekte al snel mijn talent en
-          passie voor het vertalen van menselijke taal naar computertaal om
-          hardware te laten werken. Na mijn afstuderen vervolgde ik mijn
-          opleiding en behaalde ik een diploma Industriële Onderhoudstechnieken
-          aan Sint-Jan Berchmansinstituut vzw. Vervolgens besloot ik mijn droom
-          na te jagen aan de Hogeschool Gent, waar ik de opleiding Graduaat in
-          het Programmeren volgde.
+          aan VTI Dendermonde en ontdekte mijn talent voor het programmeren van
+          PLCs. Na mijn afstuderen in Industriële Onderhoudstechnieken aan
+          Sint-Jan Berchmansinstituut vzw, vervolgde ik mijn droom aan de
+          Hogeschool Gent met een Graduaat in het Programmeren.
         </p>
+      </section>
+      <section className='focus' ref={addToRefs}>
         <p>
-          Aan de Hogeschool Gent lag de focus voornamelijk op C#, waar ik
-          diepgaande kennis en vaardigheden ontwikkelde in objectgeoriënteerd
-          programmeren en softwareontwikkeling. Tijdens mijn opleiding kwam ook
-          web development aan bod, wat mijn interesse in het bouwen van websites
-          verder aanwakkerde. Wat mij onderscheidt, is mijn vermogen om ideeën
-          direct om te zetten in werkende websites. Dankzij mijn ervaring kan ik
-          zonder uitgebreid designproces, zoals met tools als Figma, meteen aan
-          de slag met een idee en het verder ontwikkelen tot een volwaardige
-          website.
+          Tijdens mijn studie aan de Hogeschool Gent lag de focus op C#, waar ik
+          vaardigheden ontwikkelde in objectgeoriënteerd programmeren en
+          softwareontwikkeling. Mijn interesse in web development groeide ook,
+          wat mij onderscheidt door mijn vermogen om ideeën direct om te zetten
+          in werkende websites, zonder uitgebreid designproces.
         </p>
       </section>
     </div>
