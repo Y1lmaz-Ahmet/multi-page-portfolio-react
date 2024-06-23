@@ -24,6 +24,9 @@ const Contact = () => {
           console.log("FAILED...", error.text);
         }
       );
+    form.current.user_name.value = "";
+    form.current.user_email.value = "";
+    form.current.message.value = "";
   };
 
   return (
